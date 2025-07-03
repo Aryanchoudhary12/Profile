@@ -1,7 +1,6 @@
 import "./globals.css";
 import NavBar from "./navbar";
-import { Rubik_Doodle_Shadow,Bokor,Roboto_Condensed } from "next/font/google";
-import { Luckiest_Guy } from "next/font/google";
+import { Londrina_Outline,Bokor,Roboto_Condensed,Poppins } from "next/font/google";
 const robotoCondensed = Roboto_Condensed({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -12,21 +11,20 @@ const bokor = Bokor({
   weight: ['400'],
   variable: '--bokor',
 });
-const rubikDoodleShadow = Rubik_Doodle_Shadow({
+const rubikDoodleShadow = Londrina_Outline({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--rubik-doodle-shadow',
 });
-const luckiestGuy = Luckiest_Guy({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--luckiest-guy',
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: '--poppins',
 });
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${robotoCondensed.variable} ${bokor.variable} ${rubikDoodleShadow.variable} ${luckiestGuy.variable} font-sans bg-primary text-muted-foreground`}>
+      <body className={`${robotoCondensed.variable} ${bokor.variable} ${rubikDoodleShadow.variable} ${poppins.variable} font-sans bg-primary text-muted-foreground`}>
         <NavBar />
         <main>{children}</main>
       </body>

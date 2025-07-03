@@ -44,9 +44,7 @@
 .font-rubik {
   font-family: var(--rubik-doodle-shadow), sans-serif;
 }
-.font-luckiest {
-  font-family: var(--luckiest-guy), sans-serif;
-}
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -72,14 +70,6 @@
   animation: spin-border 5s linear infinite;
 }
 
-.rotate-text {
-  animation: rotate 5s linear infinite;
-  background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
-  background-size: 200% auto;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
 
 @keyframes spin-border {
   from {
@@ -90,12 +80,71 @@
     --angle: 360deg;
   }
 }
+.project-card:hover {
+  background-color:rgb(33, 61, 64);
+}
 
-@keyframes rotate {
+.project-card:hover .card-object {
+  animation: card-animation 10ms forwards;
+}
+
+.project-card .card-object {
+  animation: card-animation-reverse 10ms forwards;
+}
+.project-card:hover .card-button {
+  animation: card-button 200ms forwards;
+}
+@keyframes card-animation {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
   to {
-    background-position: 200% center;
+    transform: translateY(-100px);
+    opacity: 0;
   }
 }
+
+@keyframes card-animation-reverse {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes card-button {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-160px);
+    opacity: 1;
+  }
+}
+
+.underline {
+  padding: 0px;
+  animation: scaleit 2s ease-in-out infinite;
+}
+
+@keyframes scaleit {
+  from {
+    transform: scale(0.2, 1);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(0.2, 1);
+  }
+}
+
 
 html {
   scroll-behavior: smooth;

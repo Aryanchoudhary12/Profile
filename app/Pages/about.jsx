@@ -78,9 +78,9 @@ function About() {
   return (
     <div className="mt-6" id="About">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold font-rubik text-center">About Me</h1>
-        <div className="flex items-center justify-center w-52 h-1 bg-white/20 rounded-2xl">
-          <div className="w-6/12 h-full bg-secondary rounded-2xl"></div>
+        <h1 className="text-6xl font-bold font-rubik text-center">ABOUT ME</h1>
+        <div className="flex items-center justify-center w-52 h-2 bg-white/20 rounded-2xl mt-1">
+          <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center md:items-start p-4 gap-6 mt-6">

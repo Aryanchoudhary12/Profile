@@ -7,6 +7,9 @@ import * as THREE from "three";
 import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import { useProgress } from "@react-three/drei";
+import animation from "@/public/Animation.json";
+import Lottie from "react-lottie";
+
 function AnimatedModel() {
   const group = useRef();
   const { scene, animations } = useGLTF("/hero.glb");
@@ -96,12 +99,24 @@ export function Preload() {
 }
 
 export default function Robo() {
+  const animate = {
+    loop: true,
+    autoplay: true,
+    animationData: animation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   const { progress } = useProgress();
   return (
     <div className="h-full w-full relative">
       {progress == 100 && (
-        <div className="flex justify-end w-full absolute top-0 left-0 p-4 text-right text-4xl  drop-shadow-lg">
-          <span className="font-bold font-rubik rotate-text p-1">HOVER ME !<br />CLICK TO STOP <br />ANIMATION ...</span>
+        <div className="flex flex-col items-center justify-center absolute top-0  w-full h-full text-5xl  drop-shadow-lg left-0 p-4">
+          <Lottie
+            options={animate}
+            height={450}
+            width={450}
+          />
         </div>
       )}
 

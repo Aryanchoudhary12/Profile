@@ -50,7 +50,7 @@ function NavBar() {
         </li>
       </ul>
       <Link href="#Contact" className="hidden md:block">
-        <button className="border-2 border-button p-2 px-3 rounded-md text-sm font-semibold font-roboto  text-muted shadow-md shadow-blue-400/25">
+        <button className="border-2 border-button p-2 px-3 rounded-full text-xs font-medium font-roboto  text-muted shadow-sm shadow-blue-400/20 hover:shadow-md hover:shadow-blue-400/25 transition-colors">
           {" "}
           CONTACT ME
         </button>
