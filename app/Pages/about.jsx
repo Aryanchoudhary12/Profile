@@ -84,10 +84,6 @@ function About() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
-        <div className="h-96 w-fit">
-          <Preload />
-          <Robo />
-        </div>
         <div className="w-10/12">
           <div className="flex justify-center md:justify-start">
             <p className="text-base font-roboto font-semibold text-center md:text-left w-full">
@@ -111,11 +107,16 @@ function About() {
             <hr className="border-3 w-11/12 rounded-2xl border-primary col-span-5 mt-2" />
           </div>
         </div>
+        <div className="h-96 w-full">
+          <Preload />
+          <Robo />
+        </div>
       </div>
+
       <h1 className="text-4xl font-bold font-rubik text-center mt-6">
         What I Do ?
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative">
+      <div className="flex flex-wrap justify-center gap-2 p-2 relative">
         {skills.map((skills) => {
           return (
             <Card

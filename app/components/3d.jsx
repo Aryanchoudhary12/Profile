@@ -111,7 +111,7 @@ export default function Robo() {
   return (
     <div className="h-full w-full relative">
       {progress == 100 && (
-        <div className="flex flex-col items-center justify-center absolute -top-8  sm:w-96 w-full h-full right-2 opacity-80 overflow-hidden">
+        <div className="flex items-start justify-start absolute -top-8  w-96 sm:w-full h-full right-2 opacity-80 overflow-hidden">
           <Lottie
             options={animate}
             height={400}
