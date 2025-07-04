@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 mt-10 h-fit">
-        <div className="flex flex-col justify-center items-center lg:items-start lg:ml-4">
+        <div className="flex flex-col justify-center items-center lg:items-start lg:ml-16">
           <p className="text-xl font-semibold  ml-2 font-poppins">
             Hello , I'm{" "}
           </p>
@@ -27,12 +27,12 @@ export default function Home() {
           </p>
           <div className="flex gap-2">
             <Link href="#Contact">
-              <button className=" bg-button p-2 px-3 rounded-md text-lg font-medium font-roboto mt-6">
+              <button className=" bg-primary/80 p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto mt-6">
                 Contact Me
               </button>
             </Link>
             <Link href="/resume.pdf" target="_blank">
-              <button className="border-2 border-button p-2 px-3 rounded-md text-lg font-medium font-roboto mt-6">
+              <button className="bg-button p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto mt-6">
                 Download Resume
               </button>
             </Link>

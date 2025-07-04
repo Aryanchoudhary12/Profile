@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 function ProjectCard({ image, title, badge, link, description }) {
   return (
-    <div className="relative flex flex-col justify-between items-center gap-3 h-full w-80 bg-gray-800 p-3 rounded-lg project-card border-2 hover:bg-secondary-foreground border-secondary/10">
+    <div className="relative flex flex-col justify-between items-center gap-3 h-full w-80 bg-violet-900/20 p-4 rounded-2xl project-card  hover:bg-secondary-foreground border-2 border-violet-950/50 shadow-lg shadow-violet-500/10 hover:shadow-violet-500/15 hover:scale-102 transition-all duration-500">
       <div className="flex flex-col justify-center items-center gap-2 card-object">
         <Image
           src={image}
@@ -12,7 +12,7 @@ function ProjectCard({ image, title, badge, link, description }) {
           width="auto"
           height="auto"
           priority
-          className="h-72 w-full object-cover rounded-sm "
+          className="h-72 w-full object-cover rounded-lg "
         />
         <div className="flex flex-col items-start w-full">
           <h2 className="text-lg font-normal font-rubik">{title}</h2>

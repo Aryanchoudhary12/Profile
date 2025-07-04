@@ -50,9 +50,8 @@ function NavBar() {
         </li>
       </ul>
       <Link href="#Contact" className="hidden md:block">
-        <button className="border-2 border-button p-2 px-3 rounded-full text-xs font-medium font-roboto  text-muted shadow-sm shadow-blue-400/20 hover:shadow-md hover:shadow-blue-400/25 transition-colors">
-          {" "}
-          CONTACT ME
+        <button className=" bg-primary/80 p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto ">
+          Contact Me
         </button>
       </Link>
 
@@ -68,28 +67,27 @@ function NavBar() {
                   href="/"
                   className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background"
                 >
-                  <p className="  font-semibold text-base font-roboto">
-                    HOME
-                  </p>
+                  <p className="  font-semibold text-base font-roboto">HOME</p>
                 </Link>
-                <Link href="#About" className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background">
-                  <p
-                    className="  font-semibold text-base font-roboto"
-                  >
-                    ABOUT
-                  </p>
+                <Link
+                  href="#About"
+                  className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background"
+                >
+                  <p className="  font-semibold text-base font-roboto">ABOUT</p>
                 </Link>
-                <Link href="#Projects" className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background">
-                  <p
-                    className="font-semibold text-base font-roboto"
-                  >
+                <Link
+                  href="#Projects"
+                  className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background"
+                >
+                  <p className="font-semibold text-base font-roboto">
                     PROJECTS
                   </p>
                 </Link>
-                <Link href="#Contact" className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background">
-                  <p
-                    className=" font-semibold text-base font-roboto"
-                  >
+                <Link
+                  href="#Contact"
+                  className="text-secondary text-center p-2 border-b-2 border-secondary/20 bg-secondary-foreground hover:bg-secondary hover:text-background"
+                >
+                  <p className=" font-semibold text-base font-roboto">
                     CONTACT
                   </p>
                 </Link>

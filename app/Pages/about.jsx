@@ -79,14 +79,14 @@ function About() {
     <div className="mt-6 flex flex-col justify-center items-center" id="About">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold font-rubik text-center">ABOUT ME</h1>
-        <div className="flex items-center justify-center w-52 h-2 bg-white/20 rounded-2xl mt-1">
+        <div className="flex items-center justify-center w-52 h-2 bg-secondary-foreground rounded-2xl mt-1">
           <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
         <div className="w-10/12">
           <div className="flex justify-center md:justify-start">
-            <p className="text-base font-roboto font-semibold text-center md:text-left w-full">
+            <p className="text-lg font-poppins font-medium text-center md:text-left w-full">
               Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
               Begusarai in Bihar. I specialize in crafting seamless user
               experiences as a front-end and backend developer . Currently I'm
@@ -116,7 +116,7 @@ function About() {
       <h1 className="text-4xl font-bold font-rubik text-center mt-6">
         What I Do ?
       </h1>
-      <div className="flex flex-wrap justify-center gap-2 p-2 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative w-full">
         {skills.map((skills) => {
           return (
             <Card

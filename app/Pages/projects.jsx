@@ -53,7 +53,7 @@ function Projects() {
       id="Projects"
     >
       <h1 className="text-4xl font-bold font-rubik text-center">MY WORKS</h1>
-      <div className="flex items-center justify-center w-60 h-2 bg-white/20 rounded-2xl mt-1">
+      <div className="flex items-center justify-center w-60 h-2 bg-secondary-foreground rounded-2xl mt-1">
         <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
       </div>
       <div className="flex flex-wrap gap-4 max-w-full place-items-center h-full p-4">
