@@ -84,7 +84,7 @@ function About() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
-        <div className="h-96 w-full">
+        <div className="h-96 w-fit">
           <Preload />
           <Robo />
         </div>
