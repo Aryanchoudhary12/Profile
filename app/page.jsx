@@ -5,7 +5,7 @@ import Projects from "./Pages/projects";
 import Contact from "./Pages/contact";
 
 import Image from "next/image";
-import avatar from "@/public/image.png";
+import avatar from "../public/image.png";
 export default function Home() {
   return (
     <div>

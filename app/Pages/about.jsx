@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import avatar from "@/public/image.png";
 import Card from "@/app/components/card.jsx";
 import webdev from "@/public/web-services.png";
 import uiux from "@/public/ui.png";
