@@ -14,7 +14,7 @@ export default function Home() {
           <p className="text-xl font-semibold  ml-2 font-poppins">
             Hello , I'm{" "}
           </p>
-          <p className="text-6xl font-extrabold text-center lg:text-left font-rubik">
+          <p className="text-5xl sm:text-6xl font-extrabold text-center lg:text-left font-rubik">
             ARYAN <br />
             <span className="text-secondary">CHOUDHARY</span>
           </p>

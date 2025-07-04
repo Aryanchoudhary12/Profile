@@ -90,7 +90,7 @@ function About() {
         </div>
         <div className="w-10/12">
           <div className="flex justify-center md:justify-start">
-            <p className="text-base font-roboto font-semibold text-center md:text-left w-5/6">
+            <p className="text-base font-roboto font-semibold text-center md:text-left w-full">
               Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
               Begusarai in Bihar. I specialize in crafting seamless user
               experiences as a front-end and backend developer . Currently I'm
@@ -98,17 +98,17 @@ function About() {
               Computer and Engineering .
             </p>
           </div>
-          <div className="grid grid-cols-8  gap-2 mt-2">
+          <div className="grid grid-cols-7  gap-2 mt-2">
             <p className="font-roboto font-bold col-span-1">HTML</p>
-            <hr className="border-3 w-full rounded-2xl border-primary col-span-7 mt-2" />
+            <hr className="border-3 w-full rounded-2xl border-primary col-span-6 mt-2" />
           </div>
-          <div className="grid grid-cols-8  gap-2 mt-2">
+          <div className="grid grid-cols-7  gap-2 mt-2">
             <p className="font-roboto font-bold col-span-1">CSS</p>
-            <hr className="border-3 w-full rounded-2xl border-primary col-span-7 mt-2" />
+            <hr className="border-3 w-full rounded-2xl border-primary col-span-6 mt-2" />
           </div>
-          <div className="grid grid-cols-8  gap-2 mt-2">
+          <div className="grid grid-cols-7  gap-2 mt-2">
             <p className="font-roboto font-bold col-span-1">JS</p>
-            <hr className="border-3 w-11/12 rounded-2xl border-primary col-span-6 mt-2" />
+            <hr className="border-3 w-11/12 rounded-2xl border-primary col-span-5 mt-2" />
           </div>
         </div>
       </div>
