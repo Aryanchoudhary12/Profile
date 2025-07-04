@@ -84,7 +84,7 @@ function About() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
-        <div className="w-10/12">
+        <div className="w-11/12">
           <div className="flex justify-center md:justify-start">
             <p className="text-lg font-poppins font-medium text-center md:text-left w-full">
               Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
