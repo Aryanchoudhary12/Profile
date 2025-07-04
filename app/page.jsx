@@ -50,13 +50,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-full mb-4">
-          <div className="relative w-[calc(24rem+6px)] h-[calc(24rem+6px)] ">
+        <div className="flex justify-center items-center w-full mb-4 ">
+          <div className="relative w-[calc(20rem+6px)] h-[calc(20rem+6px)] sm:w-[calc(24rem+6px)] sm:h-[calc(24rem+6px)] ">
             <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-transparent animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-2 -top-2 shadow-xl shadow-emerald-500/30"></div>
             <Image
               src={avatar}
               alt="Avatar"
-              className="absolute inset-0 w-96 h-96 z-10 object-cover rounded-full bg-secondary-foreground"
+              className="absolute inset-0 w-80 h-80 sm:w-96 sm:h-96 z-10 object-cover rounded-full bg-secondary-foreground"
               priority
             />
           </div>

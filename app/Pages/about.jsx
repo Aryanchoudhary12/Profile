@@ -83,7 +83,7 @@ function About() {
           <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-6 mt-6 w-10/12">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
         <div className="h-96 w-full">
           <Preload />
           <Robo />
