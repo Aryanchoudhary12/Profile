@@ -1,6 +1,6 @@
 import React from "react";
-import Athletehub from "@/public/athletehub.jpg";
 import Blogweb from "@/public/blog-web.png";
+import Athletehub from "@/public/athletehub.jpg";
 import trendwise from "@/public/trendwise.png";
 import Issuetracker from "@/public/issue-tracker.png";
 import ProjectCard from "../components/ProjectCard";
@@ -11,7 +11,9 @@ function Projects() {
       image: Athletehub,
       title: "Athlete Hub",
       badge: [{ name: "React" }, { name: "Tailwind" }],
-      link:"/"
+      link: "/",
+      description:
+        "Track training, monitor progress, connect with sports community, and share achievements.",
     },
     {
       index: 2,
@@ -19,6 +21,7 @@ function Projects() {
       title: "Blog Website",
       badge: [{ name: "React" }, { name: "Tailwind" }, { name: "Postgres" }],
       link: "/",
+      description: "A platform to share blog posts.",
     },
     {
       index: 3,
@@ -26,6 +29,8 @@ function Projects() {
       title: "Issue Tracker",
       badge: [{ name: "Next.js" }, { name: "Tailwind" }, { name: "Shadcn" }],
       link: "https://issue-tracker-wine-five.vercel.app/",
+      description:
+        "Report and manage project issues.",
     },
     {
       index: 4,
@@ -38,6 +43,8 @@ function Projects() {
         { name: "Groq AI" },
       ],
       link: "https://trendwise-navy.vercel.app/",
+      description:
+        "Create and share AI-generated blogs.",
     },
   ];
   return (
@@ -45,11 +52,11 @@ function Projects() {
       className="mt-6 flex flex-col justify-center items-center mb-2"
       id="Projects"
     >
-       <h1 className="text-6xl font-bold font-rubik text-center">MY WORKS</h1>
-        <div className="flex items-center justify-center w-52 h-2 bg-white/20 rounded-2xl mt-1">
-          <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
-        </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 p-4 mt-6 w-full max-w-screen-xl place-items-center h-full">
+      <h1 className="text-4xl font-bold font-rubik text-center">MY WORKS</h1>
+      <div className="flex items-center justify-center w-60 h-2 bg-white/20 rounded-2xl mt-1">
+        <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
+      </div>
+      <div className="flex flex-wrap gap-4 max-w-full place-items-center h-full p-4">
         {projects.map((project) => (
           <ProjectCard
             key={project.index}
@@ -58,6 +65,7 @@ function Projects() {
             title={project.title}
             badge={project.badge}
             link={project.link}
+            description={project.description}
           />
         ))}
       </div>

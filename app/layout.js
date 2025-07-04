@@ -1,6 +1,6 @@
 import "./globals.css";
 import NavBar from "./navbar";
-import { Londrina_Outline,Bokor,Roboto_Condensed,Poppins } from "next/font/google";
+import { Archivo_Black,Bokor,Roboto_Condensed,Poppins } from "next/font/google";
 const robotoCondensed = Roboto_Condensed({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -11,7 +11,7 @@ const bokor = Bokor({
   weight: ['400'],
   variable: '--bokor',
 });
-const rubikDoodleShadow = Londrina_Outline({
+const rubikDoodleShadow = Archivo_Black({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--rubik-doodle-shadow',

@@ -3,8 +3,9 @@ import About from "./Pages/about";
 import Link from "next/link";
 import Projects from "./Pages/projects";
 import Contact from "./Pages/contact";
-import Robo from "./components/3d";
-import { Preload } from "./components/3d";
+
+import Image from "next/image";
+import avatar from "@/public/image.png";
 export default function Home() {
   return (
     <div>
@@ -13,7 +14,7 @@ export default function Home() {
           <p className="text-xl font-semibold  ml-2 font-poppins">
             Hello , I'm{" "}
           </p>
-          <p className="text-6xl font-extrabold text-center lg:text-left font-poppins">
+          <p className="text-6xl font-extrabold text-center lg:text-left font-rubik">
             ARYAN <br />
             <span className="text-secondary">CHOUDHARY</span>
           </p>
@@ -36,7 +37,7 @@ export default function Home() {
               </button>
             </Link>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6 mb-6">
             <Link href="https://github.com/Aryanchoudhary12">
               <Github className="h-10 w-10 text-secondary p-2 border-2 border-secondary/50 bg-secondary/5 rounded-full" />
             </Link>
@@ -48,9 +49,17 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="h-96 w-full">
-          <Preload />
-          <Robo />
+
+        <div className="flex justify-center items-center w-full mb-4">
+          <div className="relative w-[calc(24rem+6px)] h-[calc(24rem+6px)] ">
+            <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-transparent animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-2 -top-2 shadow-xl shadow-emerald-500/30"></div>
+            <Image
+              src={avatar}
+              alt="Avatar"
+              className="absolute inset-0 w-96 h-96 z-10 object-cover rounded-full bg-secondary-foreground"
+              priority
+            />
+          </div>
         </div>
       </div>
       <div className="w-full flex justify-center items-center">

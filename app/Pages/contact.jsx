@@ -35,7 +35,7 @@ function Contact() {
       id="Contact"
       className="flex flex-col justify-center items-center p-4 mt-10 h-fit "
     >
-       <h1 className="text-6xl font-bold font-rubik text-center">CONTACT ME</h1>
+       <h1 className="text-4xl font-bold font-rubik text-center">CONTACT ME</h1>
         <div className="flex items-center justify-center w-60 h-2 bg-white/20 rounded-2xl mt-1">
           <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
         </div>

@@ -80,9 +80,6 @@
     --angle: 360deg;
   }
 }
-.project-card:hover {
-  background-color:rgb(33, 61, 64);
-}
 
 .project-card:hover .card-object {
   animation: card-animation 10ms forwards;
@@ -91,18 +88,29 @@
 .project-card .card-object {
   animation: card-animation-reverse 10ms forwards;
 }
+
 .project-card:hover .card-button {
   animation: card-button 200ms forwards;
 }
+
 @keyframes card-animation {
   from {
     transform: translateY(0);
     opacity: 1;
   }
+
   to {
     transform: translateY(-100px);
     opacity: 0;
   }
+}
+
+.card-button:hover .icon {
+  transform: translateX(5px);
+  transition: all;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
 }
 
 @keyframes card-animation-reverse {
@@ -110,16 +118,19 @@
     transform: translateY(-100px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
+
 @keyframes card-button {
   from {
     transform: translateY(0);
     opacity: 0;
   }
+
   to {
     transform: translateY(-160px);
     opacity: 1;
