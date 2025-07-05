@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-full mb-4 ">
+        <div className="flex justify-center items-center w-full mb-4 overflow-hidden">
           <div className="relative w-[calc(20rem+6px)] h-[calc(20rem+6px)] sm:w-[calc(24rem+6px)] sm:h-[calc(24rem+6px)] ">
             <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-transparent animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-2 -top-2 shadow-xl shadow-emerald-500/30"></div>
             <Image

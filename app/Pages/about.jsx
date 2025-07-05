@@ -83,28 +83,44 @@ function About() {
           <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
         <div className="w-11/12">
-          <div className="flex justify-center md:justify-start">
-            <p className="text-lg font-poppins font-medium text-center md:text-left w-full">
-              Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
-              Begusarai in Bihar. I specialize in crafting seamless user
-              experiences as a front-end and backend developer . Currently I'm
-              studing in IIIT Ranchi , pursuing Bachelor of Technology in
-              Computer and Engineering .
-            </p>
-          </div>
-          <div className="grid grid-cols-7  gap-2 mt-2">
-            <p className="font-roboto font-bold col-span-1">HTML</p>
-            <hr className="border-3 w-full rounded-2xl border-primary col-span-6 mt-2" />
-          </div>
-          <div className="grid grid-cols-7  gap-2 mt-2">
-            <p className="font-roboto font-bold col-span-1">CSS</p>
-            <hr className="border-3 w-full rounded-2xl border-primary col-span-6 mt-2" />
-          </div>
-          <div className="grid grid-cols-7  gap-2 mt-2">
-            <p className="font-roboto font-bold col-span-1">JS</p>
-            <hr className="border-3 w-11/12 rounded-2xl border-primary col-span-5 mt-2" />
+          <div className="flex justify-center lg:justify-start about-border">
+            <div className="about p-1">
+              <div className="flex flex-col justify-center items-center p-6">
+                <p className="text-lg font-poppins font-medium text-center md:text-left w-full">
+                  Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
+                  Begusarai in Bihar. I specialize in crafting seamless user
+                  experiences as a front-end and backend developer . Currently
+                  I'm studing in IIIT Ranchi , pursuing Bachelor of Technology
+                  in Computer and Engineering .
+                </p>
+                <div className="flex gap-10 justify-center items-center w-full">
+                  <div className="flex flex-col gap-2">
+                    <div className="relative h-24 w-24 mt-6">
+                      <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-green-600 z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-20 w-20">
+                        <h1 className="text-xl font-rubik text-green-300">
+                          100%
+                        </h1>
+                      </div>
+                    </div>
+                    <p className="text-base font-roboto font-semibold text-emerald-400">HTML & CSS</p>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="relative h-24 w-24 mt-6">
+                      <div className="absolute inset-0 progress z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-20 w-20">
+                        <h1 className="text-xl font-rubik text-green-300">
+                          80%
+                        </h1>
+                      </div>
+                    </div>
+                    <p className="text-base font-roboto font-semibold text-emerald-400 text-center">JAVASCRIPT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="h-96 w-full">
@@ -113,10 +129,10 @@ function About() {
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold font-rubik text-center mt-6">
+      <h1 className="text-4xl font-bold font-rubik text-center mt-6 ">
         What I Do ?
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative w-full overflow-hidden">
         {skills.map((skills) => {
           return (
             <Card

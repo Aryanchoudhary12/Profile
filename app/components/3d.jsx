@@ -109,7 +109,7 @@ export default function Robo() {
   };
   const { progress } = useProgress();
   return (
-    <div className="h-full w-full relative">
+    <div className="h-full w-full relative overflow-hidden">
       {progress == 100 && (
         <div className="flex items-start justify-start absolute -top-8  w-96 sm:w-full h-full right-2 opacity-80 overflow-hidden">
           <Lottie
