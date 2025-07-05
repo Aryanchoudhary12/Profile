@@ -97,9 +97,9 @@ function About() {
                 </p>
                 <div className="flex gap-10 justify-center items-center w-full">
                   <div className="flex flex-col gap-2">
-                    <div className="relative h-24 w-24 mt-6">
+                    <div className="relative h-20 w-20 mt-6">
                       <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-green-600 z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-20 w-20">
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-16 w-16">
                         <h1 className="text-xl font-rubik text-green-300">
                           100%
                         </h1>
@@ -108,9 +108,9 @@ function About() {
                     <p className="text-base font-roboto font-semibold text-emerald-400">HTML & CSS</p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="relative h-24 w-24 mt-6">
+                    <div className="relative h-20 w-20 mt-6">
                       <div className="absolute inset-0 progress z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-20 w-20">
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-16 w-16">
                         <h1 className="text-xl font-rubik text-green-300">
                           80%
                         </h1>
