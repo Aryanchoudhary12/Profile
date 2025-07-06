@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Card from "@/app/components/card.jsx";
@@ -13,7 +14,8 @@ import postgre from "@/public/postgre.png";
 import prisma from "@/public/prisma.png";
 import cpp from "@/public/cpp.png";
 import python from "@/public/python.png";
-import Robo, { Preload } from "../components/3d";
+import Robo from "../components/3d";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 function About() {
   const skills = [
     {
@@ -39,38 +41,47 @@ function About() {
   ];
   const techStack = [
     {
+      key:1,
       image: html,
       title: "HTML",
     },
     {
+      key:2,
       image: css,
       title: "CSS",
     },
     {
+      key:3,
       image: js,
       title: "JavaScript",
     },
     {
+      key:4,
       image: nodejs,
       title: "Node.js",
     },
     {
+      key:5,
       image: react,
       title: "React",
     },
     {
+      key:6,
       image: postgre,
       title: "PostgreSQL",
     },
     {
+      key:7,
       image: prisma,
       title: "Prisma",
     },
     {
+      key:8,
       image: cpp,
       title: "C++",
     },
     {
+      key:9,
       image: python,
       title: "Python",
     },
@@ -78,10 +89,9 @@ function About() {
   return (
     <div className="mt-6 flex flex-col justify-center items-center" id="About">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold font-rubik text-center">ABOUT ME</h1>
-        <div className="flex items-center justify-center w-52 h-2 bg-secondary-foreground rounded-2xl mt-1">
-          <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
-        </div>
+        <h1 className="text-4xl font-bold font-rubik text-center">
+          ABOUT <span className="text-secondary">ME</span>
+        </h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 gap-2 mt-6 w-10/12">
         <div className="w-11/12">
@@ -98,25 +108,29 @@ function About() {
                 <div className="flex gap-10 justify-center items-center w-full">
                   <div className="flex flex-col gap-2">
                     <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-green-600 z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-16 w-16">
+                      <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-green-600 z-0 rounded-full -top-[9px] -left-[9px] shadow-xl "></div>
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
                         <h1 className="text-xl font-rubik text-green-300">
                           100%
                         </h1>
                       </div>
                     </div>
-                    <p className="text-base font-roboto font-semibold text-emerald-400">HTML & CSS</p>
+                    <p className="text-base font-roboto font-semibold text-emerald-400">
+                      HTML & CSS
+                    </p>
                   </div>
                   <div className="flex flex-col gap-2">
                     <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 progress z-0 rounded-full -top-[14px] -left-[14px] shadow-xl "></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-16 w-16">
+                      <div className="absolute inset-0 progress z-0 rounded-full -top-[9px] -left-[9px] shadow-xl "></div>
+                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
                         <h1 className="text-xl font-rubik text-green-300">
                           80%
                         </h1>
                       </div>
                     </div>
-                    <p className="text-base font-roboto font-semibold text-emerald-400 text-center">JAVASCRIPT</p>
+                    <p className="text-base font-roboto font-semibold text-emerald-400 text-center">
+                      JAVASCRIPT
+                    </p>
                   </div>
                 </div>
               </div>
@@ -124,12 +138,11 @@ function About() {
           </div>
         </div>
         <div className="h-96 w-full">
-          <Preload />
           <Robo />
         </div>
       </div>
 
-      <h1 className="text-4xl font-bold font-rubik text-center mt-6 ">
+      <h1 className="text-3xl font-bold font-rubik text-center mt-6 ">
         What I Do ?
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative w-full overflow-hidden">
@@ -145,30 +158,17 @@ function About() {
           );
         })}
       </div>
-      <h1 className="text-4xl font-bold font-rubik text-center mt-6">
+      <h1 className="text-3xl font-bold font-rubik text-center mt-6">
         Tech Stack
       </h1>
-      <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 p-4 w-full">
-        {techStack.map((stack, index) => {
-          return (
-            <div
-              key={stack.title}
-              className="flex flex-col items-center gap-2  border-2 border-secondary/20 rounded-md p-2 py-4 bg-secondary-foreground"
-            >
-              <p className="w-full text-base font-bold text-muted-foreground text-left">
-                {index + 1}.
-              </p>
-              <Image
-                src={stack.image}
-                alt={stack.title}
-                className="h-12 w-12 object-cover"
-              />
-              <p className="text-lg font-semibold font-roboto">{stack.title}</p>
-            </div>
-          );
-        })}
+        <div className="h-fit rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+          <InfiniteMovingCards
+            items={techStack}
+            direction="right"
+            speed="slow"
+          />
+        </div>
       </div>
-    </div>
   );
 }
 

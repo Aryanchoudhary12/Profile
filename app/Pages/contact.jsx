@@ -1,8 +1,8 @@
-'use client';
+"use client";
 import { Instagram, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 import Link from "next/link";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 function Contact() {
   const onsubmit = async (event) => {
     event.preventDefault();
@@ -35,10 +35,9 @@ function Contact() {
       id="Contact"
       className="flex flex-col justify-center items-center p-4 mt-10 h-fit "
     >
-       <h1 className="text-4xl font-bold font-rubik text-center">CONTACT ME</h1>
-        <div className="flex items-center justify-center w-60 h-2 bg-secondary-foreground rounded-2xl mt-1">
-          <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
-        </div>
+      <h1 className="text-4xl font-bold font-rubik text-center">
+        CONTACT <span className="text-secondary">ME</span>
+      </h1>
       <div className="flex flex-col md:flex-row justify-center items-start mt-6 w-full">
         <div className="flex flex-col justify-center items-start p-4 gap-2 w-full">
           <h1 className="text-3xl font-bold font-roboto">Contact Info</h1>

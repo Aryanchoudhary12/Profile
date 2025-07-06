@@ -4,6 +4,7 @@ import Athletehub from "@/public/athletehub.jpg";
 import trendwise from "@/public/trendwise.png";
 import Issuetracker from "@/public/issue-tracker.png";
 import ProjectCard from "../components/ProjectCard";
+
 function Projects() {
   const projects = [
     {
@@ -29,8 +30,7 @@ function Projects() {
       title: "Issue Tracker",
       badge: [{ name: "Next.js" }, { name: "Tailwind" }, { name: "Shadcn" }],
       link: "https://issue-tracker-wine-five.vercel.app/",
-      description:
-        "Report and manage project issues.",
+      description: "Report and manage project issues.",
     },
     {
       index: 4,
@@ -43,8 +43,7 @@ function Projects() {
         { name: "Groq AI" },
       ],
       link: "https://trendwise-navy.vercel.app/",
-      description:
-        "Create and share AI-generated blogs.",
+      description: "Create and share AI-generated blogs.",
     },
   ];
   return (
@@ -52,22 +51,23 @@ function Projects() {
       className="mt-6 flex flex-col justify-center items-center mb-2"
       id="Projects"
     >
-      <h1 className="text-4xl font-bold font-rubik text-center">MY WORKS</h1>
-      <div className="flex items-center justify-center w-60 h-2 bg-secondary-foreground rounded-2xl mt-1">
-        <div className="w-full h-full bg-secondary rounded-2xl underline"></div>
-      </div>
-      <div className="flex flex-wrap gap-4 max-w-full place-items-center h-full p-4">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.index}
-            index={project.index}
-            image={project.image}
-            title={project.title}
-            badge={project.badge}
-            link={project.link}
-            description={project.description}
-          />
-        ))}
+      <h1 className="text-4xl font-bold font-rubik text-center">
+        MY <span className="text-secondary">WORKS</span>
+      </h1>
+      <div className="flex justify-center items-center w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  mt-10 gap-4 w-fit  h-full p-4">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.index}
+              index={project.index}
+              image={project.image}
+              title={project.title}
+              badge={project.badge}
+              link={project.link}
+              description={project.description}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react";
 import { useProgress } from "@react-three/drei";
 import animation from "@/public/Animation.json";
 import Lottie from "react-lottie";
-
+import { BackgroundBeams } from "@/components/ui/background-beams";
 function AnimatedModel() {
   const group = useRef();
   const { scene, animations } = useGLTF("/hero.glb");
@@ -109,30 +109,31 @@ export default function Robo() {
   };
   const { progress } = useProgress();
   return (
-    <div className="h-full w-full relative overflow-hidden">
-      {progress == 100 && (
-        <div className="flex items-start justify-start absolute -top-8  w-96 sm:w-full h-full right-2 opacity-80 overflow-hidden">
-          <Lottie
-            options={animate}
-            height={400}
-            width={400 }
-          />
-        </div>
-      )}
+    <div className="h-full w-full relative overflow-hidden about-border">
+      <div className="h-full w-full about">
+        <BackgroundBeams />
+        {progress == 100 ? (
+          <div className="flex items-start justify-start absolute -top-8  w-96 sm:w-full h-full right-2 opacity-80 overflow-hidden">
+            <Lottie options={animate} height={400} width={400} />
+          </div>
+        ) : (
+          <Preload />
+        )}
 
-      <Canvas camera={{ position: [1, 1, 5], fov: 45 }}>
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[5, 10, 5]} intensity={1} />
-        <Suspense fallback={null}>
-          <AnimatedModel />
-          <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-          />
-        </Suspense>
-      </Canvas>
+        <Canvas camera={{ position: [1, 1, 5], fov: 45 }}>
+          <ambientLight intensity={0.8} />
+          <directionalLight position={[5, 10, 5]} intensity={1} />
+          <Suspense fallback={null}>
+            <AnimatedModel />
+            <OrbitControls
+              enableZoom={false}
+              enablePan={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+          </Suspense>
+        </Canvas>
+      </div>
     </div>
   );
 }

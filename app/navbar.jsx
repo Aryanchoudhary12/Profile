@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet";
 function NavBar() {
   return (
-    <div className="flex justify-between items-center p-1  border-b-2 border-secondary/10 ">
+    <div className="flex justify-between items-center p-1  border-b-2 border-secondary/10 bg-background z-50">
       <div className="title h-full p-2 pr-6 bg-secondary-foreground">
         <h1 className="text-4xl font-bold font-bokor">
           Port<span className="text-primary">folio</span>
