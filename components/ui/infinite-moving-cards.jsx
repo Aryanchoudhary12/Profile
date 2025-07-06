@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-
+import { BackgroundGradient } from "./background-gradient";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
@@ -71,14 +71,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex w-max bg-transparent shrink-0 flex-nowrap gap-4 py-4",
           start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
-          <li
-            className="relative w-fit  shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 px-8 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+          <BackgroundGradient
+            className="relative w-fit  shrink-0 rounded-3xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] p-5 px-8 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
             key={item.key}
           >
             <div
@@ -95,7 +95,7 @@ export const InfiniteMovingCards = ({
                 {item.title}
               </span>
             </div>
-          </li>
+          </BackgroundGradient>
         ))}
       </ul>
     </div>

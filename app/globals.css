@@ -107,6 +107,9 @@
     }
   }
 }
+.progress{
+  background:conic-gradient(rgb(7, 171, 86)300deg,rgb(46, 38, 59) 0deg);
+}
 
 @keyframes scaleit {
   from {

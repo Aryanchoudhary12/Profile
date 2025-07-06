@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { PinContainer } from "@/components/ui/3d-pin";
 function ProjectCard({ image, title, badge, link, description }) {
   return (

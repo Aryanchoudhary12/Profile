@@ -121,7 +121,7 @@ function About() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 progress z-0 rounded-full -top-[9px] -left-[9px] shadow-xl "></div>
+                      <div className="absolute inset-0 progress z-0 rounded-full -top-[9px] -left-[9px] shadow-xl progress"></div>
                       <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
                         <h1 className="text-xl font-rubik text-green-300">
                           80%
@@ -158,7 +158,7 @@ function About() {
           );
         })}
       </div>
-      <h1 className="text-3xl font-bold font-rubik text-center mt-6">
+      <h1 className="text-3xl font-bold font-rubik text-center mt-6 mb-6">
         Tech Stack
       </h1>
         <div className="h-fit rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
