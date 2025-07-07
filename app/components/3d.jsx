@@ -113,9 +113,7 @@ export default function Robo() {
       <div className="h-full w-full about">
         <BackgroundBeams />
         {progress == 100 ? (
-          <div className="flex items-start justify-start absolute -top-8  w-96 sm:w-full h-full right-2 opacity-80 overflow-hidden">
-            <Lottie options={animate} height={400} width={400} />
-          </div>
+          ""
         ) : (
           <Preload />
         )}
