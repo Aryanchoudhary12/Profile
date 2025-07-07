@@ -51,27 +51,25 @@ function Projects() {
       className="mt-6 flex flex-col justify-center items-center mb-2"
       id="Projects"
     >
-      <h1 className="text-4xl font-bold font-rubik text-left w-full pl-8 mt-2">
+      <h1 className="text-4xl font-bold font-rubik text-center mt-2">
         MY <span className="text-secondary">WORKS</span>
       </h1>
-      <div className="flex items-start w-full pl-8">
-        <div className="w-60 h-10 relative">
-          <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-          <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-          <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-          <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+      <div className="w-60 h-10 relative">
+        <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
-          <SparklesCore
-            background="transparent"
-            minSize={0.4}
-            maxSize={1}
-            particleDensity={1200}
-            className="w-full h-10"
-            particleColor="#FFFFFF"
-          />
+        <SparklesCore
+          background="transparent"
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
+          className="w-full h-10"
+          particleColor="#FFFFFF"
+        />
 
-          <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-        </div>
+        <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
       <div className="flex justify-center items-center w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  mt-10 gap-4 w-fit  h-full p-4">
