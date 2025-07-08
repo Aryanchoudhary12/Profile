@@ -15,7 +15,7 @@ import cpp from "@/public/cpp.png";
 import python from "@/public/python.png";
 import Robo from "../components/3d";
 import { HeroParallax } from "@/components/ui/hero-parallax";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { SparklesCore } from "@/components/ui/sparkles";
 function About() {
   const skills = [
     {
@@ -93,16 +93,40 @@ function About() {
         <div className="w-full">
           <div className="flex justify-center lg:justify-start ">
             <div className=" p-1 bg-gradient from-secondary-foreground to-background">
-              <div className="flex flex-col justify-center items-center lg:items-start p-6">
-                <h1 className="text-4xl font-bold font-rubik text-center mb-4">
-                  ABOUT <span className="text-secondary ">ME</span>
+              <div className="flex flex-col justify-center items-start p-6">
+                <p className="font-poppins font-medium text-base mb-1 text-gray-400">
+                  INTRODUCTION
+                </p>
+                <h1 className="text-4xl font-bold font-rubik text-left">
+                  Overview .
                 </h1>
-                <p className="text-lg font-poppins font-medium text-center lg:text-left w-full mb-2">
-                  Hello ! I’m Aryan Choudhary, hailing from the vibrant town of
-                  Begusarai in Bihar. I specialize in crafting seamless user
-                  experiences as a front-end and backend developer . Currently
-                  I'm studing in IIIT Ranchi , pursuing Bachelor of Technology
-                  in Computer and Engineering .
+                <div className="w-60 h-4 relative">
+                  <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+                  <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+                  <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+                  <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+                  <SparklesCore
+                    background="transparent"
+                    minSize={0.4}
+                    maxSize={1}
+                    particleDensity={1200}
+                    className="w-full h-4"
+                    particleColor="#FFFFFF"
+                  />
+
+                  <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                </div>
+                <p className="text-base font-poppins font-medium text-gray-400 text-left w-full mb-2">
+                  I’m Aryan Choudhary, a developer from the vibrant town of
+                  Begusarai, Bihar. I specialize in creating smooth,
+                  user-friendly experiences as a front-end and back-end
+                  developer. Currently, I’m pursuing a Bachelor of Technology in
+                  Computer Science and Engineering at IIIT Ranchi, where I’ve
+                  been building my skills in web development, design, and
+                  problem-solving through hands-on projects and academic
+                  learning. I’m passionate about technology, always eager to
+                  learn, and driven to build meaningful digital experiences.
                 </p>
                 <div className="flex gap-10 justify-center items-center w-fit pl-2">
                   <div className="flex flex-col gap-2">
@@ -168,7 +192,7 @@ function About() {
         })}
       </div>
       <div className="h-fit flex flex-col antialiased items-center justify-center relative overflow-hidden w-full">
-        <HeroParallax products={techStack}/>
+        <HeroParallax products={techStack} />
       </div>
     </div>
   );

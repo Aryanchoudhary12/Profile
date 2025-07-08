@@ -7,12 +7,10 @@ import * as THREE from "three";
 import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
 import { useProgress } from "@react-three/drei";
-import animation from "@/public/Animation.json";
-import Lottie from "react-lottie";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 function AnimatedModel() {
   const group = useRef();
-  const { scene, animations } = useGLTF("/hero.glb");
+  const { scene, animations } = useGLTF("/Animation.glb");
   const mixer = useRef();
   const [hovered, setHovered] = useState(false);
   const [playing, setPlaying] = useState(true);
@@ -61,7 +59,7 @@ function AnimatedModel() {
       ref={group}
       object={scene}
       scale={1.8}
-      position={[0, -1, 0]}
+      position={[0, -1.5, 0]}
       onPointerOver={() => {
         document.body.style.cursor = "pointer";
         setHovered(true);
@@ -99,14 +97,6 @@ export function Preload() {
 }
 
 export default function Robo() {
-  const animate = {
-    loop: true,
-    autoplay: true,
-    animationData: animation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   const { progress } = useProgress();
   return (
     <div className="h-full w-full relative overflow-hidden about-border">
