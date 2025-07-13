@@ -39,9 +39,6 @@ function Contact() {
       <div className="flex flex-col md:flex-row justify-center items-start w-full">
         <div className="flex flex-col justify-center items-start p-4 w-full">
           <div className="">
-            <p className="font-poppins font-medium text-base mb-1 text-gray-400">
-              GET IN TOUCH
-            </p>
             <h1 className="text-4xl font-bold font-rubik text-left">
               Contact Info.
             </h1>

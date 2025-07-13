@@ -99,8 +99,8 @@ export function Preload() {
 export default function Robo() {
   const { progress } = useProgress();
   return (
-    <div className="h-full w-full relative overflow-hidden about-border">
-      <div className="h-full w-full about">
+    <div className="h-full w-full relative overflow-hidden about-border rounded-xl ">
+      <div className="h-full w-full about rounded-xl">
         <BackgroundBeams />
         {progress == 100 ? (
           ""

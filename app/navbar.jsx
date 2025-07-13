@@ -53,7 +53,7 @@ function NavBar() {
         </li>
       </ul>
       <Link href="#Contact" className="hidden md:block pr-4">
-        <button className=" bg-primary/80 p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto ">
+        <button className="bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-800 p-2 w-40 rounded text-base font-medium font-roboto">
           Contact Me
         </button>
       </Link>

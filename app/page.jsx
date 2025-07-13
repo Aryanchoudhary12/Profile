@@ -30,12 +30,12 @@ export default function Home() {
             </p>
             <div className="flex gap-2 relative">
               <Link href="#Contact">
-                <button className=" bg-primary/80 p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto mt-6">
+                <button className="p-2 w-40 rounded text-base font-medium font-roboto mt-6 backdrop-blur-md border border-white/10 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.1)_inset] bg-white/5">
                   Contact Me
                 </button>
               </Link>
               <Link href="/resume.pdf" target="_blank">
-                <button className="bg-button p-2 w-40 rounded-tl-xl rounded-br-xl text-base font-medium font-roboto mt-6">
+                <button className="bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-800 p-2 w-40 rounded text-base font-medium font-roboto mt-6">
                   Download Resume
                 </button>
               </Link>
@@ -45,7 +45,7 @@ export default function Home() {
                 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Github className="h-6 w-6 text-secondary " />
+                    <Github className="h-6 w-6 text-sky-300 " />
                   </span>
                 </button>
               </Link>
@@ -53,7 +53,7 @@ export default function Home() {
                 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Linkedin className="h-6 w-6 text-secondary " />
+                    <Linkedin className="h-6 w-6 text-sky-300 " />
                   </span>
                 </button>{" "}
               </Link>
@@ -61,7 +61,7 @@ export default function Home() {
                 <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Instagram className="h-6 w-6 text-secondary " />
+                    <Instagram className="h-6 w-6 text-sky-300 " />
                   </span>
                 </button>{" "}
               </Link>
@@ -74,7 +74,7 @@ export default function Home() {
               <Image
                 src={avatar}
                 alt="Avatar"
-                className="absolute inset-0 w-80 h-80 sm:w-88 sm:h-88 z-10 object-cover rounded-full bg-secondary-foreground"
+                className="absolute inset-0 w-80 h-80 sm:w-88 sm:h-88 z-10 object-cover rounded-full bg-background"
                 priority
               />
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
             <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none animate-bounce">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                <ArrowDown className="h-6 w-6 text-button" />
+                <ArrowDown className="h-6 w-6 text-sky-300" />
               </span>
             </button>
           </Link>

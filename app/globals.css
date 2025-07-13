@@ -38,6 +38,10 @@
   font-family: var(--roboto-condensed), sans-serif;
 }
 
+.font-poppins {
+  font-family: var(--poppins), sans-serif;
+}
+
 .font-bokor {
   font-family: var(--bokor), sans-serif;
 }
@@ -88,27 +92,28 @@
 }
 
 .about-border {
-  clip-path: polygon(10% 0, 100% 0, 100% 2%, 100% 90%, 90% 100%, 2% 100%, 0 100%, 0 10%);
+  clip-path: polygon(0% 0%, 90% 0, 100% 20%, 100% 100%, 0 100%);
   background-color: rgb(54, 145, 134);
   padding: 2px;
 }
 
 .about {
-  clip-path: polygon(10% 0, 100% 0, 100% 2%, 100% 90%, 90% 100%, 2% 100%, 0 100%, 0 10%);
-  background-image:linear-gradient(var(--color-secondary-foreground)50%,var(--background)100%);
+  clip-path: polygon(0% 0%, 90% 0, 100% 20%, 100% 100%, 0 100%);
+  background-image: linear-gradient(var(--color-secondary-foreground)50%, var(--background)100%);
 }
 
 @theme inline {
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
- 
+
   @keyframes scroll {
     to {
       transform: translate(calc(-50% - 0.5rem));
     }
   }
 }
-.progress{
-  background:conic-gradient(rgb(7, 171, 86)300deg,rgb(46, 38, 59) 0deg);
+
+.progress {
+  background: conic-gradient(rgb(7, 171, 86)300deg, rgb(46, 38, 59) 0deg);
 }
 
 @keyframes scaleit {

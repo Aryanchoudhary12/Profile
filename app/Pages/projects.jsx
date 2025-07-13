@@ -3,10 +3,37 @@ import Blogweb from "@/public/blog-web.png";
 import Athletehub from "@/public/athletehub.jpg";
 import trendwise from "@/public/trendwise.png";
 import Issuetracker from "@/public/issue-tracker.png";
+import posturepro from "@/public/posturepro.png";
 import ProjectCard from "../components/ProjectCard";
 import { SparklesCore } from "@/components/ui/sparkles";
 function Projects() {
   const projects = [
+    {
+      index: 4,
+      image: trendwise,
+      title: "TrendWise",
+      badge: [
+        { name: "Next.js" },
+        { name: "Tailwind" },
+        { name: "Shadcn" },
+        { name: "Groq AI" },
+      ],
+      link: "https://trendwise-navy.vercel.app/",
+      description: "Create and share AI-generated blogs.",
+    },
+    {
+      index: 5,
+      image: posturepro,
+      title: "PosturePro",
+      badge: [
+        { name: "Next.js" },
+        { name: "Tailwind" },
+        { name: "Shadcn" },
+        { name: "MediaPose" },
+      ],
+      link: "https://posturepro-amber.vercel.app/",
+      description: "Fix your posture using live webcam.",
+    },
     {
       index: 1,
       image: Athletehub,
@@ -32,19 +59,6 @@ function Projects() {
       link: "https://issue-tracker-wine-five.vercel.app/",
       description: "Report and manage project issues.",
     },
-    {
-      index: 4,
-      image: trendwise,
-      title: "TrendWise",
-      badge: [
-        { name: "Next.js" },
-        { name: "Tailwind" },
-        { name: "Shadcn" },
-        { name: "Groq AI" },
-      ],
-      link: "https://trendwise-navy.vercel.app/",
-      description: "Create and share AI-generated blogs.",
-    },
   ];
   return (
     <div
@@ -52,10 +66,10 @@ function Projects() {
       id="Projects"
     >
       <div className="pl-4 max-w-10/12">
-        <p className="font-poppins font-medium text-base mb-1 text-gray-400">
-          MY WORK
+        <p className="font-poppins font-medium text-lg text-gray-300">
+          latest Works
         </p>
-        <h1 className="text-4xl font-bold font-rubik  mt-2 text-left">
+        <h1 className="text-4xl font-bold font-rubik  text-left">
           Projects.
         </h1>
         <div className="w-60 h-4 relative">
