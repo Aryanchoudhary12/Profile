@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import { Timeline } from "@/app/components/timeline.jsx";
-import AchievementCard from "@/app/components/AchievementCard.jsx";
+import { Timeline } from "@/app/components/timeline";
+import AchievementCard from "@/app/components/achievementCard";
 import { TiArrowRightOutline } from "react-icons/ti";
 import { FaTrophy, FaCode } from "react-icons/fa";
 
