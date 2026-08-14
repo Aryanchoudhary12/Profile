@@ -1,9 +1,14 @@
 "use client";
-import { Instagram, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 import swal from "sweetalert";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import Button from "@/app/components/ui/button";
+
 function Contact() {
   const onsubmit = async (event) => {
     event.preventDefault();
@@ -14,23 +19,27 @@ function Contact() {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      swal.fire({
-        title: "Good job!",
-        text: "Your message sent successfully!",
-        icon: "success",
-      });
+      if (res.success) {
+        swal("Good job!", "Your message sent successfully!", "success");
+        event.target.reset();
+      } else {
+        swal("Oops!", "Something went wrong. Please try again.", "error");
+      }
+    } catch (err) {
+      swal("Oops!", "Could not send your message. Please try again.", "error");
     }
   };
+
   return (
     <div
       id="Contact"
@@ -65,15 +74,15 @@ function Contact() {
             If you have any questions, project ideas, or just want to say hello,
             don’t hesitate to get in touch.
           </p>
-          <div className="flex items-center gap-4 mt-2">
-            <Mail className="h-10 w-10 text-secondary p-2 border-2 border-secondary/50 bg-secondary/5 rounded-full" />
+          <div className="flex items-center gap-4 mt-4">
+            <Mail className="h-10 w-10 text-secondary p-2 border-2 border-secondary/50 bg-secondary/5 rounded-xl" />
             <div>
               <h1 className="text-base font-roboto font-semibold">Email :</h1>
               <p className="text-sm "> aryankumar911315@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center gap-4 mt-2">
-            <Phone className="h-10 w-10 text-secondary p-2 border-2 border-secondary/50 bg-secondary/5 rounded-full" />
+            <Phone className="h-10 w-10 text-secondary p-2 border-2 border-secondary/50 bg-secondary/5 rounded-xl" />
             <div>
               <h1 className="text-base font-roboto font-semibold">Phone :</h1>
               <p className="text-sm "> +91 9113156691</p>
@@ -94,7 +103,7 @@ function Contact() {
               <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                  <Github className="h-6 w-6 text-secondary " />
+                  <FaGithub className="h-6 w-6 text-secondary " />
                 </span>
               </button>
             </Link>
@@ -102,7 +111,7 @@ function Contact() {
               <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                  <Linkedin className="h-6 w-6 text-secondary " />
+                  <FaLinkedinIn className="h-6 w-6 text-secondary " />
                 </span>
               </button>{" "}
             </Link>
@@ -110,7 +119,7 @@ function Contact() {
               <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                  <Instagram className="h-6 w-6 text-secondary " />
+                  <RiInstagramFill className="h-6 w-6 text-secondary " />
                 </span>
               </button>{" "}
             </Link>
@@ -124,24 +133,32 @@ function Contact() {
           <h1 className="text-3xl font-bold font-rubik">Get in Touch.</h1>
           <input
             type="text"
+            name="name"
             placeholder="Name"
+            required
             className=" rounded-xs p-3 w-full text-sm bg-secondary-foreground"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            required
             className=" rounded-xs p-3 w-full text-sm bg-secondary-foreground"
           />
           <textarea
+            name="message"
             placeholder="Message"
+            required
             className=" rounded-xs p-3 w-full text-sm bg-secondary-foreground h-36"
           />
-          <button
+          <Button
             type="submit"
-            className="bg-button p-2 px-4 rounded-full text-sm font-medium font-roboto mt-2"
+            variant={"primary"}
+            size={"medium"}
+            className="rounded-md font-roboto font-semibold text-base w-40 mt-4"
           >
             Send Message
-          </button>
+          </Button>
         </form>
       </div>
     </div>

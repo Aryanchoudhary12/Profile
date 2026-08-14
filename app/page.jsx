@@ -6,12 +6,14 @@ import Contact from "./Pages/contact";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 import avatar from "../public/avatar.png";
+import Button from "@/app/components/ui/button";
+import ExperienceSection from "@/app/components/experienceSection";
 export default function Home() {
   return (
     <div>
       <div className="relative w-full h-full ">
         <BackgroundBeams />
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 pt-10 h-fit relative antialiased">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 p-4 pt-10 h-fit relative antialiased">
           <div className="flex flex-col justify-center items-center lg:items-start lg:ml-16">
             <p className="text-xl font-semibold  ml-2 font-poppins">
               Hello , I'm{" "}
@@ -28,42 +30,46 @@ export default function Home() {
               on building modern, responsive, and user-friendly digital
               experiences.
             </p>
-            <div className="flex gap-2 relative">
-              <Link href="#Contact">
-                <button className="p-2 w-40 rounded text-base font-medium font-roboto mt-6 backdrop-blur-md border border-white/10 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.1)_inset] bg-white/5">
-                  Contact Me
-                </button>
-              </Link>
-              <Link href="/resume.pdf" target="_blank">
-                <button className="bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-800 p-2 w-40 rounded text-base font-medium font-roboto mt-6">
-                  Download Resume
-                </button>
-              </Link>
+            <div className="flex gap-4 mt-6 relative">
+              <div className="flex flex-col items-center gap-1 relative pr-6 border-r-2 border-secondary/30">
+                <span className="font-poppins text-3xl font-extrabold text-secondary">
+                  500+
+                </span>
+                <span className="font-poppins text-xs font-medium text-muted">
+                  DSA Problems
+                </span>
+              </div>
+              <div className="flex flex-col items-center gap-1 relative pl-6">
+                <span className="font-poppins text-3xl font-extrabold text-secondary">
+                  0.5 Year
+                </span>
+                <span className="font-poppins text-xs font-medium text-muted">
+                  Internship Experience
+                </span>
+              </div>
             </div>
-            <div className="flex gap-4 mt-6 mb-6 relative">
-              <Link href="https://github.com/Aryanchoudhary12">
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Github className="h-6 w-6 text-sky-300 " />
-                  </span>
-                </button>
+            <div className="flex gap-4 relative mt-6">
+              <Link href="#Contact">
+                <Button
+                  variant={"outline"}
+                  size={"medium"}
+                  className="rounded-md font-roboto font-semibold text-base w-40"
+                >
+                  Contact Me
+                </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/aryan-choudhary-9256a7290/">
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Linkedin className="h-6 w-6 text-sky-300 " />
-                  </span>
-                </button>{" "}
-              </Link>
-              <Link href="https://www.instagram.com/aryanchoudhary2119/">
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none ">
-                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    <Instagram className="h-6 w-6 text-sky-300 " />
-                  </span>
-                </button>{" "}
+              <Link
+                href="https://drive.google.com/file/d/1EKZXsIl6wEWOlhTU7ESDOm3d8OCgFXwe/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={"primary"}
+                  size={"medium"}
+                  className="rounded-md font-roboto font-semibold text-base w-40"
+                >
+                  Download Resume
+                </Button>
               </Link>
             </div>
           </div>
@@ -94,6 +100,7 @@ export default function Home() {
 
       <About id="About" />
       <Projects />
+      <ExperienceSection />
       <Contact />
     </div>
   );

@@ -16,6 +16,7 @@ import python from "@/public/python.png";
 import Robo from "../components/3d";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { SparklesCore } from "@/components/ui/sparkles";
+import {AnimatedCircularProgressBar } from "@/components/ui/progressBar";
 function About() {
   const skills = [
     {
@@ -88,12 +89,11 @@ function About() {
   ];
   return (
     <div className="mt-6 flex flex-col justify-center items-center" id="About">
-      <div className="flex flex-col justify-center items-center"></div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 gap-4 mt-6 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 px-10 gap-4 mt-6 w-full">
         <div className="w-full">
           <div className="flex justify-center lg:justify-start ">
             <div className=" p-1 bg-gradient from-secondary-foreground to-background">
-              <div className="flex flex-col justify-center items-start p-6">
+              <div className="flex flex-col justify-center items-start">
                 <p className="font-poppins font-medium text-lg mb-1 text-gray-300">
                   Introduction
                 </p>
@@ -128,43 +128,43 @@ function About() {
                   learning. I’m passionate about technology, always eager to
                   learn, and driven to build meaningful digital experiences.
                 </p>
-                <div className="flex gap-10 justify-center items-center w-fit pl-2">
+                <div className="flex gap-10 justify-center items-center w-fit mt-6">
                   <div className="flex flex-col gap-2">
-                    <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-green-600 z-0 rounded-full -top-[9px] -left-[9px] shadow-xl "></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
-                        <h1 className="text-lg font-rubik text-green-300">
-                          100%
-                        </h1>
-                      </div>
-                    </div>
-                    <p className="text-sm font-roboto font-medium text-emerald-400">
+                    <AnimatedCircularProgressBar
+                      max={100}
+                      min={0}
+                      value={95}
+                      gaugePrimaryColor="var(--primary)"
+                      gaugeSecondaryColor="var(--secondary)"
+                      className="h-24 w-24"
+                    />
+                    <p className="text-xs font-poppins font-semibold text-secondary text-center">
                       HTML & CSS
                     </p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 progress z-0 rounded-full -top-[9px] -left-[9px] shadow-xl progress"></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
-                        <h1 className="text-lg font-rubik text-green-300">
-                          80%
-                        </h1>
-                      </div>
-                    </div>
-                    <p className="text-base font-roboto font-medium text-emerald-400 text-center">
+                    <AnimatedCircularProgressBar
+                      max={100}
+                      min={0}
+                      value={95}
+                      gaugePrimaryColor="var(--primary)"
+                      gaugeSecondaryColor="var(--secondary)"
+                      className="h-24 w-24"
+                    />
+                    <p className="text-sm font-poppins font-semibold text-secondary text-center">
                       JavaScript
                     </p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="relative h-20 w-20 mt-6">
-                      <div className="absolute inset-0 progress z-0 rounded-full -top-[9px] -left-[9px] shadow-xl progress"></div>
-                      <div className="flex justify-center items-center absolute inset-0 rounded-full bg-secondary-foreground h-18 w-18">
-                        <h1 className="text-lg font-rubik text-green-300">
-                          80%
-                        </h1>
-                      </div>
-                    </div>
-                    <p className="text-base font-roboto font-medium text-emerald-400 text-center">
+                    <AnimatedCircularProgressBar
+                      max={100}
+                      min={0}
+                      value={90}
+                      gaugePrimaryColor="var(--primary)"
+                      gaugeSecondaryColor="var(--secondary)"
+                      className="h-24 w-24"
+                    />
+                    <p className="text-sm font-poppins font-semibold text-secondary text-center">
                       React JS
                     </p>
                   </div>
@@ -178,7 +178,7 @@ function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 relative w-full overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 px-6 relative w-full overflow-hidden">
         {skills.map((skills) => {
           return (
             <Card
