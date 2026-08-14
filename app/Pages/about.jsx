@@ -89,7 +89,7 @@ function About() {
   ];
   return (
     <div className="mt-6 flex flex-col justify-center items-center" id="About">
-      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 px-10 gap-4 mt-6 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 px-6 sm:px-10 gap-4 mt-6 w-full">
         <div className="w-full">
           <div className="flex justify-center lg:justify-start ">
             <div className=" p-1 bg-gradient from-secondary-foreground to-background">
@@ -117,7 +117,7 @@ function About() {
 
                   <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
                 </div>
-                <p className="text-base font-poppins font-medium text-gray-400 text-left w-full mb-2">
+                <p className="text-sm font-poppins font-medium text-secondary text-left w-full mb-2">
                   I’m Aryan Choudhary, a developer from the vibrant town of
                   Begusarai, Bihar. I specialize in creating smooth,
                   user-friendly experiences as a front-end and back-end
@@ -128,7 +128,7 @@ function About() {
                   learning. I’m passionate about technology, always eager to
                   learn, and driven to build meaningful digital experiences.
                 </p>
-                <div className="flex gap-10 justify-center items-center w-fit mt-6">
+                <div className="flex gap-4 sm:gap-10 justify-center items-center w-fit mt-6">
                   <div className="flex flex-col gap-2">
                     <AnimatedCircularProgressBar
                       max={100}
@@ -136,7 +136,7 @@ function About() {
                       value={95}
                       gaugePrimaryColor="var(--primary)"
                       gaugeSecondaryColor="var(--secondary)"
-                      className="h-24 w-24"
+                      className="sm:h-24 sm:w-24 h-16 w-16"
                     />
                     <p className="text-xs font-poppins font-semibold text-secondary text-center">
                       HTML & CSS
@@ -149,7 +149,7 @@ function About() {
                       value={95}
                       gaugePrimaryColor="var(--primary)"
                       gaugeSecondaryColor="var(--secondary)"
-                      className="h-24 w-24"
+                      className="sm:h-24 sm:w-24 h-16 w-16"
                     />
                     <p className="text-sm font-poppins font-semibold text-secondary text-center">
                       JavaScript
@@ -162,7 +162,7 @@ function About() {
                       value={90}
                       gaugePrimaryColor="var(--primary)"
                       gaugeSecondaryColor="var(--secondary)"
-                      className="h-24 w-24"
+                      className="sm:h-24 sm:w-24 h-16 w-16"
                     />
                     <p className="text-sm font-poppins font-semibold text-secondary text-center">
                       React JS
@@ -178,7 +178,7 @@ function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2 px-6 relative w-full overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 px-6 sm:px-10 relative w-full overflow-hidden">
         {skills.map((skills) => {
           return (
             <Card
@@ -191,7 +191,7 @@ function About() {
           );
         })}
       </div>
-      <div className="h-fit flex flex-col antialiased items-center justify-center relative overflow-hidden w-full">
+      <div className="h-fit flex flex-col antialiased items-center justify-center relative overflow-hidden w-full px-6 sm:px-10">
         <HeroParallax products={techStack} />
       </div>
     </div>

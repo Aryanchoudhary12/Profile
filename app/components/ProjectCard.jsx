@@ -5,7 +5,7 @@ function ProjectCard({ title, badge, link, description, details }) {
   return (
     <div className=" flex flex-col justify-center items-center gap-3 h-full">
       <PinContainer title={title} href={link}>
-        <div className="flex flex-col justify-center items-center gap-2 card-object w-80 rounded-2xl">
+        <div className="flex flex-col justify-center items-center gap-2 card-object w-72 sm:w-80 rounded-2xl">
           <div className="flex flex-col items-start w-full">
             <h2 className="text-xl font-semibold font-poppins">{title}</h2>
             <p className="text-sm py-2 font-poppins text-muted">

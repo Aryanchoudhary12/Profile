@@ -134,13 +134,11 @@ function Projects() {
 
           <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
-        <p className="font-poppins font-medium text-base mb-10 text-gray-400">
+        <p className="font-poppins font-medium text-base mb-10 text-secondary">
           A collection of personal and academic projects that showcase my skills
           in full-stack development, UI/UX design, and problem-solving. Each
           project reflects my commitment to building responsive, user-friendly,
-          and performance-optimized web applications. From interactive
-          interfaces to scalable backend systems, these works demonstrate both
-          creativity and technical expertise.
+          and performance-optimized web applications.
         </p>
       </div>
       <div className="flex justify-center items-start w-full mt-6">

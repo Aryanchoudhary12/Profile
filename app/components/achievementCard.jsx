@@ -2,7 +2,7 @@ import React from "react";
 
 function AchievementCard({ title, stat, unit, description, badge }) {
   return (
-    <div className="flex flex-col justify-center items-center gap-2 rounded-2xl  bg-secondary-foreground  border border-[rgba(255,255,255,0.10)]  shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group  group-hover/pin:border-white/[0.2] transitiont w-72 p-4">
+    <div className="flex flex-col justify-center items-center gap-2 rounded-2xl  bg-secondary-foreground  border border-[rgba(255,255,255,0.10)]  shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group  group-hover/pin:border-white/[0.2] transitiont w-64 sm:w-72 p-4">
       <div className="flex flex-col items-start w-full">
         <div className="flex items-baseline gap-2">
           <span className="text-4xl font-black font-poppins bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
