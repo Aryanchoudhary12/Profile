@@ -142,7 +142,7 @@ function Projects() {
         </p>
       </div>
       <div className="flex justify-center items-start w-full mt-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-10 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-12 md:gap-10 h-full">
           {projects.map((project) => (
             <ProjectCard
               key={project.index}

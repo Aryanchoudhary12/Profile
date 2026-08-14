@@ -8,6 +8,8 @@ import Image from "next/image";
 import avatar from "../public/avatar.png";
 import Button from "@/app/components/ui/button";
 import ExperienceSection from "@/app/components/experienceSection";
+import { BiSolidDownload } from "react-icons/bi";
+
 export default function Home() {
   return (
     <div>
@@ -18,11 +20,11 @@ export default function Home() {
             <p className="text-xl font-semibold  ml-2 font-poppins">
               Hello , I'm{" "}
             </p>
-            <p className="text-5xl sm:text-6xl font-extrabold text-center lg:text-left font-rubik">
+            <p className="text-4xl sm:text-6xl font-extrabold text-center lg:text-left font-rubik">
               ARYAN <br />
               <span className="text-secondary">CHOUDHARY</span>
             </p>
-            <p className="text-2xl font-poppins font-semibold">
+            <p className="text-xl sm:text-2xl font-poppins font-semibold">
               And I'm a <span className="text-muted">Web Developer</span>
             </p>
             <p className="text-lg font-roboto font-medium mt-4 border-l-3 border-muted p-2 pl-4 w-5/6">
@@ -53,7 +55,7 @@ export default function Home() {
                 <Button
                   variant={"outline"}
                   size={"medium"}
-                  className="rounded-md font-roboto font-semibold text-base w-40"
+                  className="rounded-md font-roboto font-semibold text-base w-32"
                 >
                   Contact Me
                 </Button>
@@ -66,17 +68,18 @@ export default function Home() {
                 <Button
                   variant={"primary"}
                   size={"medium"}
-                  className="rounded-md font-roboto font-semibold text-base w-40"
+                  className="flex items-center justify-center gap-1.5 rounded-md font-roboto font-semibold text-base w-32"
                 >
-                  Download Resume
+                  <BiSolidDownload />
+                  Resume
                 </Button>
               </Link>
             </div>
           </div>
 
           <div className="flex justify-center items-center w-full mb-4 ">
-            <div className="relative w-[calc(18rem+4px)] h-[calc(18rem+4px)] sm:w-[calc(22rem+6px)] sm:h-[calc(22rem+6px)] ">
-              <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-emerald-800 animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-2 -top-2 shadow-xl shadow-emerald-500/15"></div>
+            <div className="relative w-[calc(18rem+4px)] h-[calc(18rem+4px)] sm:w-[calc(22rem+4px)] sm:h-[calc(22rem+4px)] ">
+              <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-emerald-800 animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-1.5 -top-1.5 shadow-xl shadow-emerald-500/15"></div>
               <Image
                 src={avatar}
                 alt="Avatar"
