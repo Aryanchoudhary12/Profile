@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 export const Timeline = ({ data, heading, subheading }) => {
   const ref = useRef(null);
@@ -36,6 +37,23 @@ export const Timeline = ({ data, heading, subheading }) => {
               {heading}
             </h2>
           )}
+          <div className="w-60 h-4 relative">
+            <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+            <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+            <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+            <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+            <SparklesCore
+              background="transparent"
+              minSize={0.4}
+              maxSize={1}
+              particleDensity={1200}
+              className="w-full h-4"
+              particleColor="#FFFFFF"
+            />
+
+            <div className="absolute inset-0 w-full h-full  [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+          </div>
         </div>
       )}
 

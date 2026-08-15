@@ -96,7 +96,7 @@ function ExperienceSection() {
 
   return (
     <div
-      className="mt-16 flex flex-col justify-center items-center w-full px-10"
+      className="mt-16 flex flex-col justify-center items-center w-full px-6 sm:px-10"
       id="Experience"
     >
       <Timeline
