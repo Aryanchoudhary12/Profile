@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <div className="relative w-full h-full ">
         <BackgroundBeams />
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 p-4 pt-10 h-fit relative antialiased">
+        <div className="grid lg:grid-cols-2 grid-cols-1 place-items-center lg:place-items-start gap-10 p-4 pt-10 h-fit relative antialiased">
           <div className="flex flex-col justify-center items-center lg:items-start lg:ml-16">
             <p className="text-xl font-semibold  ml-2 font-poppins">
               Hello , I'm{" "}
@@ -77,19 +77,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center w-full mb-4 ">
-            <div className="relative w-[calc(18rem+4px)] h-[calc(18rem+4px)] sm:w-[calc(22rem+4px)] sm:h-[calc(22rem+4px)] ">
-              <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-emerald-800 animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-1.5 -top-1.5 shadow-xl shadow-emerald-500/15"></div>
+          <div className="flex justify-center items-center w-full">
+            <div className="relative w-[calc(16rem+4px)] h-[calc(16rem+4px)] sm:w-[calc(22rem+4px)] sm:h-[calc(22rem+4px)] ">
+              <div className="absolute inset-0 bg-linear-to-r from-gray-500 via-green-500 to-emerald-800 animate-spin transition-all z-0 [animation-duration:2s] rounded-full -left-1.5 -top-1.5 shadow-md sm:shadow-xl shadow-emerald-500/15"></div>
               <Image
                 src={avatar}
                 alt="Avatar"
-                className="absolute inset-0 w-72 h-72 sm:w-88 sm:h-88 z-10 object-cover rounded-full bg-background shrink-0"
+                className="absolute inset-0 w-64 h-64 sm:w-88 sm:h-88 z-10 object-cover rounded-full bg-background shrink-0"
                 priority
               />
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-center mt-6">
           <Link href="#About">
             <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none animate-bounce">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
