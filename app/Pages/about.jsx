@@ -72,12 +72,18 @@ function About() {
       items: [
         { title: "Node.js", image: nodejs },
         { title: "Express", iconUrl: si("express") },
+        { title: "Fastify", iconUrl: si("fastify") },
         { title: "FastAPI", iconUrl: si("fastapi") },
         { title: "Socket.IO", iconUrl: si("socketdotio") },
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
         { title: "WebRTC", iconUrl: si("webrtc") },
         { title: "GraphQL", iconUrl: si("graphql") },
         { title: "Prisma", image: prisma },
-        { title: "Redis", iconUrl: si("redis") },
+        { title: "BullMQ", iconUrl: si("redis") },
         { title: "Turborepo", iconUrl: si("turborepo") },
       ],
     },
@@ -100,6 +106,7 @@ function About() {
         { title: "Docker", iconUrl: si("docker") },
         { title: "Kubernetes", iconUrl: si("kubernetes") },
         { title: "Terraform", iconUrl: si("terraform") },
+        { title: "Nginx", iconUrl: si("nginx") },
         { title: "Prometheus", iconUrl: si("prometheus") },
         { title: "GitHub Actions", iconUrl: si("githubactions") },
       ],
