@@ -16,7 +16,11 @@ import python from "@/public/python.png";
 import Robo from "../components/3d";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { SparklesCore } from "@/components/ui/sparkles";
-import {AnimatedCircularProgressBar } from "@/components/ui/progressBar";
+import { AnimatedCircularProgressBar } from "@/components/ui/progressBar";
+
+const si = (slug) =>
+  `https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/${slug}.svg`;
+
 function About() {
   const skills = [
     {
@@ -40,53 +44,85 @@ function About() {
         "Developing interactive and dynamic mobile applications using React Native.",
     },
   ];
+
   const techStack = [
     {
-      key: 1,
-      image: html,
-      title: "HTML",
+      category: "Languages",
+      items: [
+        { title: "C", image: cpp },
+        { title: "C++", image: cpp },
+        { title: "JavaScript", image: js },
+        { title: "TypeScript", iconUrl: si("typescript") },
+        { title: "Python", image: python },
+        { title: "SQL", iconUrl: si("postgresql") },
+      ],
     },
     {
-      key: 2,
-      image: css,
-      title: "CSS",
+      category: "Frameworks & Frontend",
+      items: [
+        { title: "HTML", image: html },
+        { title: "CSS", image: css },
+        { title: "React", image: react },
+        { title: "Next.js", iconUrl: si("nextdotjs") },
+        { title: "Tailwind CSS", iconUrl: si("tailwindcss") },
+      ],
     },
     {
-      key: 3,
-      image: js,
-      title: "JavaScript",
+      category: "Backend",
+      items: [
+        { title: "Node.js", image: nodejs },
+        { title: "Express", iconUrl: si("express") },
+        { title: "Fastify", iconUrl: si("fastify") },
+        { title: "NestJS", iconUrl: si("nestjs") },
+        { title: "FastAPI", iconUrl: si("fastapi") },
+        { title: "Socket.IO", iconUrl: si("socketdotio") },
+        { title: "WebRTC", iconUrl: si("webrtc") },
+        { title: "GraphQL", iconUrl: si("graphql") },
+        { title: "tRPC", iconUrl: si("trpc") },
+        { title: "Prisma", image: prisma },
+        { title: "BullMQ", iconUrl: si("redis") },
+        { title: "Turborepo", iconUrl: si("turborepo") },
+      ],
     },
     {
-      key: 4,
-      image: nodejs,
-      title: "Node.js",
+      category: "Databases & Messaging",
+      items: [
+        { title: "PostgreSQL", image: postgre },
+        { title: "MongoDB", iconUrl: si("mongodb") },
+        { title: "Redis", iconUrl: si("redis") },
+        { title: "Elasticsearch", iconUrl: si("elasticsearch") },
+        { title: "Kafka", iconUrl: si("apachekafka") },
+      ],
     },
     {
-      key: 5,
-      image: react,
-      title: "React",
+      category: "Cloud & DevOps",
+      items: [
+        { title: "GCP", iconUrl: si("googlecloud") },
+        { title: "Vercel", iconUrl: si("vercel") },
+        { title: "Cloudflare", iconUrl: si("cloudflare") },
+        { title: "Docker", iconUrl: si("docker") },
+        { title: "Kubernetes", iconUrl: si("kubernetes") },
+        { title: "Terraform", iconUrl: si("terraform") },
+        { title: "Prometheus", iconUrl: si("prometheus") },
+        { title: "GitHub Actions", iconUrl: si("githubactions") },
+      ],
     },
     {
-      key: 6,
-      image: postgre,
-      title: "PostgreSQL",
+      category: "AI / ML",
+      items: [
+        { title: "LangChain", iconUrl: si("langchain") },
+        { title: "Gemini", iconUrl: si("googlegemini") },
+      ],
     },
     {
-      key: 7,
-      image: prisma,
-      title: "Prisma",
-    },
-    {
-      key: 8,
-      image: cpp,
-      title: "C++",
-    },
-    {
-      key: 9,
-      image: python,
-      title: "Python",
+      category: "Testing & Tooling",
+      items: [
+        { title: "Jest", iconUrl: si("jest") },
+        { title: "Git", iconUrl: si("git") },
+      ],
     },
   ];
+
   return (
     <div className="mt-6 flex flex-col justify-center items-center" id="About">
       <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center p-4 px-6 sm:px-10 gap-4 mt-6 w-full">

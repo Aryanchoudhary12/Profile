@@ -5,7 +5,7 @@ import Projects from "./Pages/projects";
 import Contact from "./Pages/contact";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
-import avatar from "../public/avatar.png";
+import avatar from "../public/avatar.jpeg";
 import Button from "@/app/components/ui/button";
 import ExperienceSection from "@/app/components/experienceSection";
 import { BiSolidDownload } from "react-icons/bi";
